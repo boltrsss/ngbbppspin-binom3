@@ -523,18 +523,18 @@ var modal = $modal({
 content: '<p style="text-align:center;">You have 1 more chance!</p><br><p style="text-align:center;">Please try again!</p>',
 });
 switch (count) {
-case 2:
+case 1:
 button.disabled = !0, dWheel.className = "spinAround", setTimeout(function () {
 button.disabled = !1, modal.show(), $('.modal__btn-close').click(function () { autospin2() });
 }, 6800);
 break;
-case 1:
+case 2:
 dWheel.className = "spinAround2", setTimeout(function () {
 dWheel.className = dWheel.className + " transparent"
 }, 6800), setTimeout(function () {
 device.style.display = "block", device.style.left = whCon.offsetWidth / 2 - device.offsetWidth / 2 +
 "px", device.style.top = conMid - device.offsetHeight / 2 + "px"
-}, 4000), setTimeout(function () {
+}, 7000), setTimeout(function () {
 first.innerHTML = "<img src='images/loader.gif'>", first.style.padding = "195px 0px", setTimeout(function () {
 first.parentNode.removeChild(first), second.style.display = "block", con.insertBefore(second, con
 .firstChild), setInterval("countdown()", 1000)
