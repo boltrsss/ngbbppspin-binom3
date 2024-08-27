@@ -523,12 +523,12 @@ var modal = $modal({
 content: '<p style="text-align:center;">You have 1 more chance!</p><br><p style="text-align:center;">Please try again!</p>',
 });
 switch (count) {
-case 1:
+case 2:
 button.disabled = !0, dWheel.className = "spinAround", setTimeout(function () {
 button.disabled = !1, modal.show(), $('.modal__btn-close').click(function () { autospin2() });
 }, 6800);
 break;
-case 2:
+case 1:
 dWheel.className = "spinAround2", setTimeout(function () {
 dWheel.className = dWheel.className + " transparent"
 }, 6800), setTimeout(function () {
