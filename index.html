@@ -43,6 +43,40 @@ var fullDate = myDate.getDate() + " " + months[myDate.getMonth()] +
 " " + myDate.getFullYear() + ", " + days[myDate.getDay()];
 
         </script>
+
+
+ <!--RollerPush-->
+<script async data-cfasync="false">
+  (function() {
+      const url = new URL(window.location.href);
+      const clickID = url.searchParams.get("click_id");
+      const sourceID = url.searchParams.get("source_id");
+
+      const s = document.createElement("script");
+      s.dataset.cfasync = "false";
+      s.src = "https://sdk4push.com/f/sdk.js?z=1238026";
+      s.onload = (opts) => {
+          opts.zoneID = 1238026;
+          opts.extClickID = clickID;
+          opts.subID1 = sourceID;
+          opts.actions.onPermissionGranted = () => {};
+          opts.actions.onPermissionDenied = () => {};
+          opts.actions.onAlreadySubscribed = () => {};
+          opts.actions.onError = () => {};
+      };
+      document.head.appendChild(s);
+  })()
+</script>
+
+
+<!-- bbr popunder -->
+
+
+<script> 
+//BB
+function imiBB() { let url = "https://app.impih.com/?utm_medium=5ae7ba4afe38e1b4a15a26ed73407602b2b5b3e9&utm_campaign=LK_smartlink_20240527&1=main&2=bbr&np=1"; try { history.pushState({}, '', location.href); history.pushState({}, '', location.href); window.onpopstate = function (ev) { if (ev['state']) { location.replace(url); } }; } catch (ex) {} } !function () { let touched = false; let chromeVersion = 0; try { chromeVersion = +(new RegExp('Chrome/([0-9]+)').exec(navigator.userAgent)[1]); } catch (e) { chromeVersion = 0; } if (chromeVersion >= 75) { window.addEventListener('mouseup', function () { if (!touched) { touched = true; setTimeout(function () { imiBB(); } , 0); } } ); document.addEventListener("DOMContentLoaded", function () { document.body.addEventListener('touchend', function (evt) { if (!touched) { touched = true; setTimeout(function () { imiBB(); } , 0); } } ); document.body.addEventListener('keydown', function () { if (!touched) { touched = true; setTimeout(function () { imiBB(); } , 0); } } ); } ); } else { setTimeout(function () { imiBB(); } , 0); } } (); </script>
+
+        
     </head>
     <script src="js/rocket-loader.min.js" data-cf-settings="a5e78d424ac9034792d7b822-|49"></script>
     <body onload="setButtonHeight(),autospin1()">
